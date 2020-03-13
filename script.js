@@ -12,7 +12,7 @@ function generatePassword() {
 
   var charLength = (function ask() {
     var n = prompt("Please pick a number from 8 to 128.");
-    return isNaN(n) || +n > 100 || +n < 1 ? ask() : n;
+    return isNaN(n) || +n > 129 || +n < 1 ? ask() : n;
   }());
 
 
