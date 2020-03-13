@@ -6,7 +6,8 @@ var numberArr = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 
 function generatePassword() {
   var userArr = [];
-
+  var combArr = [];
+  var randArr = [];
 
 
   var charLength = (function ask() {
@@ -41,7 +42,6 @@ function generatePassword() {
       userArr.push(numberArr);
   };
 
-  var combArr = []
 
   for (var i = 0; userArr.length !== 0; i++) {
     var j = 0;
@@ -55,15 +55,14 @@ function generatePassword() {
     }
   }
 
-  var randArr = [];
 
   for (var i = 0; i < charLength; i++) {
     var userPw = combArr[Math.floor(Math.random() * combArr.length)]
     randArr.push(userPw);
   };
 
-  var pwString = randArr.toString().split(',').join("");
 
+  var pwString = randArr.toString().split(',').join("");
 
   return pwString;
 }
